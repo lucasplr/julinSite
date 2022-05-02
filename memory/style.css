@@ -14,15 +14,19 @@ body{
 }
 header{
     background-color: red;
-    height: 50px;
+    height: 85px;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 0px 15px;
 }
 .logo{
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 65px;
     margin: auto 0;
     border-radius: 5px;
 }
@@ -37,15 +41,16 @@ header{
     list-style: none;
     text-decoration: none;
     margin: auto 0;
-    padding: 0px 4px;
+    padding: 0px 8px;
 }
 .nav a{
     color: black;
+    font-size: 1.2em;
     text-decoration: none;
 }
 .nav a:hover{
     color: white;
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 .text{
     text-align: center;
@@ -58,10 +63,11 @@ header{
 }
 .main{
     background-color: rgba(167, 167, 167, 0.877);
-    margin: 1px auto;
+    margin: 90px auto;
+    padding-bottom: 50px;
     border-radius: 2px;
     box-shadow: .5px .5px 5px black;
-    width: 400px;
+    width: 700px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -102,12 +108,16 @@ img{
 .img-border{
     border: none;
     padding: 1px;
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: rgba(167, 167, 167, 0);
 }
 .resultText{
     background-color: rgba(196, 194, 194, 0.199);
-    margin: 35px auto 2px;
+    margin: 50px auto;
     border-radius: 15px;
-    height: 25px;
+    height: 35px;
     width: 300px;
     display: flex;
     align-items: center;
@@ -117,8 +127,12 @@ img{
 }
 footer{
     background-color: red;
-    height: 30px;
+    margin-top: 125px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    height: 30px;
 }
