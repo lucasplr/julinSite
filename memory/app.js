@@ -128,6 +128,8 @@ function flipCard(e){
     chosenCardsIds.push(tg)
     e.currentTarget.setAttribute('src', cardArray[tg].img)
     e.currentTarget.classList.add("flip")
+
+    console.log(e.currentTarget)
     if(chosenCards.length === 2){
         setTimeout(checkMatch, 500)
 

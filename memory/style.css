@@ -67,7 +67,7 @@ header{
     padding-bottom: 50px;
     border-radius: 2px;
     box-shadow: .5px .5px 5px black;
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -76,10 +76,11 @@ header{
 .text{
     text-align: center;
     margin-bottom: 5px;
+    margin-top: 25px;
 }
 .grid{
     display: flex;
-    margin: 0 auto;
+    margin: 25px auto;
     justify-content: center;
     width: 330px;
     height: 300px;
@@ -136,3 +137,34 @@ footer{
     align-items: center;
     height: 30px;
 }
+
+@media screen and (max-width: 670px){
+    .main{
+        background-color: rgba(167, 167, 167, 0.877);
+        margin: 90px auto;
+        padding-bottom: 50px;
+        border-radius: 2px;
+        box-shadow: .5px .5px 5px black;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 900px){
+    .main{
+        background-color: rgba(167, 167, 167, 0.877);
+        margin: 90px auto;
+        padding-bottom: 50px;
+        border-radius: 2px;
+        box-shadow: .5px .5px 5px black;
+        width: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
