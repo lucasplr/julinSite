@@ -66,4 +66,5 @@ header{
     margin: 5px auto;
     width: 250px;
     height: 250px;
+    border-radius: 5px;
 }

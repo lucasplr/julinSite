@@ -4,6 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+    background-position: center;
+}
 header{
     background-color: red;
     height: 50px;
@@ -53,7 +58,7 @@ header{
     margin: 1px auto;
     border-radius: 2px;
     box-shadow: .5px .5px 5px black;
-    width: 100%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -97,9 +102,9 @@ img{
 }
 .resultText{
     background-color: rgba(196, 194, 194, 0.199);
-    margin: 25px auto;
+    margin: 35px auto 25px;
     border-radius: 15px;
-    height: 50px;
+    height: 30px;
     width: 300px;
     display: flex;
     align-items: center;
