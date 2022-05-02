@@ -62,6 +62,7 @@ header{
     padding: 15px;
 }
 .img-desc{
+    display: flex;
     margin: 5px auto;
     width: 250px;
     height: 250px;

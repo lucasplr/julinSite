@@ -82,7 +82,8 @@ function boardCreator () {
     cardArray.forEach((card, index) => {
         const cardA = document.createElement('img')
         cardA.setAttribute('src', 'images/blank.png')
-        cardA.classList.add("img-before")
+        cardA.setAttribute('id', 'this')
+        cardA.classList.add("this")
         cardA.setAttribute('data-id', index)
         cardA.addEventListener("click", flipCard)
         grid.appendChild(cardA)
@@ -91,7 +92,7 @@ function boardCreator () {
 }
 
 function checkMatch (){
-    const cards = document.querySelectorAll('img')
+    const cards = document.querySelectorAll('#this')
     if (chosenCards[0] === chosenCards[1] && chosenCardsIds[0] !== chosenCardsIds[1]){
         setTimeout(changeText, 500)
         cards[chosenCardsIds[0]].setAttribute('src', 'images/white.png')
