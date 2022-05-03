@@ -58,10 +58,6 @@ body{
 }
 header{
     background-color: red;
-    height: 85px;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
 }
 .head{
@@ -128,7 +124,7 @@ header{
 }
 .main{ 
     background-color: rgba(167, 167, 167, 0.877);
-    margin: 90px auto;
+    margin: 30px auto;
     padding-bottom: 50px;
     border-radius: 5px;
     width: 400px;
@@ -181,7 +177,6 @@ footer{
         margin: auto 0;
         display: flex;
         padding:25px;
-        background-color: red;
     }
     .nav-toggle {
         font-size: 1.5rem;
@@ -225,7 +220,6 @@ footer{
         margin: auto 0;
         display: flex;
         padding:25px;
-        background-color: red;
     }
     .nav-toggle {
         font-size: 1.5rem;
