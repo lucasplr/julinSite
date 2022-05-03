@@ -64,10 +64,81 @@ const cardArray = [
         img: 'images/8.jpg',
     }
 ]
+const cardArray2 = [
+    {
+        name: "fries",
+        img: 'images/11.jpg',
+    },
+    {
+        name: "cheeseburger",
+        img: 'images/22.jpg',
+    },
+    {
+        name: "hotdog",
+        img: 'images/33.jpg',
+    },
+    {
+        name: "ice-cream",
+        img: 'images/44.jpg',
+    },
+    {
+        name: "milkshake",
+        img: 'images/55.jpg',
+    },
+    {
+        name: "pizza",
+        img: 'images/66.jpg',
+    },
+    {
+        name: "fries",
+        img: 'images/77.jpg',
+    },
+    {
+        name: "cheeseburger",
+        img: 'images/88.jpg',
+    },
+    {
+        name: "fries",
+        img: 'images/11.jpg',
+    },
+    {
+        name: "cheeseburger",
+        img: 'images/22.jpg',
+    },
+    {
+        name: "hotdog",
+        img: 'images/33.jpg',
+    },
+    {
+        name: "ice-cream",
+        img: 'images/44.jpg',
+    },
+    {
+        name: "milkshake",
+        img: 'images/55.jpg',
+    },
+    {
+        name: "pizza",
+        img: 'images/66.jpg',
+    },
+    {
+        name: "fries",
+        img: 'images/77.jpg',
+    },
+    {
+        name: "cheeseburger",
+        img: 'images/88.jpg',
+    }
+]
 
 const grid = document.querySelector(".grid")
 const result = document.querySelector(".result")
 const reultText = document.querySelector(".resultText")
+
+const header = document.querySelector(".header")
+
+const headerWidth = header.getBoundingClientRect().width
+console.log(headerWidth)
 
 counter = 0
 let chosenCards = []
@@ -90,6 +161,20 @@ function boardCreator () {
 
     })
 }
+
+function boardCreatorBig () {
+    cardArray2.forEach((card, index) => {
+        const cardA = document.createElement('img')
+        cardA.setAttribute('src', 'images/blank.png')
+        cardA.setAttribute('id', 'this')
+        cardA.classList.add("this")
+        cardA.setAttribute('data-id', index)
+        cardA.addEventListener("click", flipCard)
+        grid.appendChild(cardA)
+
+    })
+}
+
 
 function checkMatch (){
     const cards = document.querySelectorAll('#this')
@@ -137,7 +222,13 @@ function flipCard(e){
     }
 }
 
-boardCreator()
+if(headerWidth < 700){
+    boardCreator()
+}else{
+    boardCreatorBig()
+}
+
+
 
 
 
@@ -154,3 +245,4 @@ btn.addEventListener("click", () => {
         nav.classList.add("nav-show")
     }
 })
+
