@@ -157,9 +157,9 @@ footer{
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);
-        margin: 90px auto;
+        margin: 30px auto;
         padding-bottom: 50px;
-        border-radius: 2px;
+        border-radius: 5px;
         box-shadow: .5px .5px 5px black;
         width: 650px;
         display: flex;
@@ -174,7 +174,7 @@ footer{
         justify-content: space-between;
     }
     .nav{
-        margin: auto 0;
+        margin: 5px 0;
         display: flex;
         padding:25px;
     }
@@ -206,9 +206,9 @@ footer{
     }
     .main{
         background-color: rgba(167, 167, 167, 0.877);
-        margin: 90px auto;
+        margin: 30px auto;
         padding-bottom: 50px;
-        border-radius: 2px;
+        border-radius: 5px;
         box-shadow: .5px .5px 5px black;
         width: 700px;
         display: flex;
@@ -217,7 +217,7 @@ footer{
         justify-content: center;
     }
     .nav{
-        margin: auto 0;
+        margin: 5px 0;
         display: flex;
         padding:25px;
     }

@@ -96,9 +96,9 @@ header{
     background-color: rgba(167, 167, 167, 0.877);
     margin: 30px auto;
     padding-bottom: 50px;
-    border-radius: 2px;
+    border-radius: 5px;
     box-shadow: .5px .5px 5px black;
-    width: 400px;
+    width: 360px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -169,6 +169,50 @@ footer{
     height: 30px;
 }
 
+@media screen and (min-width: 700px){
+    .main{
+        background-color: rgba(167, 167, 167, 0.877);
+        margin: 30px auto;
+        padding-bottom: 50px;
+        border-radius: 5px;
+        box-shadow: .5px .5px 5px black;
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav{
+        margin: 5px 0;
+        display: flex;
+        padding:25px;
+    }
+    .nav-toggle {
+        font-size: 1.5rem;
+        color: var(--clr-grey-1);
+        background: transparent;
+        border-color: transparent;
+        transition: var(--transition);
+        cursor: pointer;
+        display: none;
+      }
+      .nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+      .nav ul li{
+        list-style: none;
+        text-decoration: none;
+        margin: auto 0;
+        padding: 0px 10px;
+    }
+}
 @media screen and (min-width: 900px){
     header{
         display: flex;
@@ -177,21 +221,20 @@ footer{
     }
     .main{
         background-color: rgba(167, 167, 167, 0.877);
-        margin: 90px auto;
+        margin: 30px auto;
         padding-bottom: 50px;
-        border-radius: 2px;
+        border-radius: 5px;
         box-shadow: .5px .5px 5px black;
-        width: 800px;
+        width: 700px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
     }
     .nav{
-        margin: auto 0;
+        margin: 5px 0;
         display: flex;
         padding:25px;
-        background-color: red;
     }
     .nav-toggle {
         font-size: 1.5rem;
