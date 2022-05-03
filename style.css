@@ -64,10 +64,18 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+}
+.head{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 25px;
+    padding: 0 25px;
+}
+.head button{
+    margin-top: 15px;
+}
+.head .logo{
+   margin-top: 5px;
 }
 .logo{
     width: 65px;
@@ -77,7 +85,41 @@ header{
 }
 .nav{
     margin: auto 0;
+    padding: 10px;
+    height: 0;
+    background-color: red;
+    overflow: hidden;
+    animation: bounce 2s ease-in-out infinite;
 }
+.nav-show{
+    animation: bounce 2s ease-in-out infinite;
+    height: auto !important;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .nav-toggle {
     font-size: 1.5rem;
     color: var(--clr-grey-1);
@@ -92,22 +134,23 @@ header{
   }
 .nav ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .nav ul li{
     list-style: none;
     text-decoration: none;
     margin: auto 0;
-    padding: 0px 8px;
+    padding: 0px 10px;
+    display: flex;
+    padding: 5px 15px;
 }
 .nav a{
     color: black;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-decoration: none;
 }
 .nav a:hover{
     color: white;
-    font-size: 1.4em;
 }
 .main{ 
     background-color: rgba(167, 167, 167, 0.877);
@@ -153,9 +196,45 @@ footer{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
+        
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav{
+        margin: auto 0;
+        display: flex;
+        padding:15px;
+        background-color: red;
+    }
+    .nav-toggle {
+        font-size: 1.5rem;
+        color: var(--clr-grey-1);
+        background: transparent;
+        border-color: transparent;
+        transition: var(--transition);
+        cursor: pointer;
+        display: none;
+      }
+      .nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+      .nav ul li{
+        list-style: none;
+        text-decoration: none;
+        margin: auto 0;
+        padding: 0px 10px;
     }
 }
 @media screen and (min-width: 900px){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .main{
         background-color: rgba(167, 167, 167, 0.877);
         margin: 90px auto;
@@ -168,4 +247,30 @@ footer{
         flex-wrap: wrap;
         justify-content: center;
     }
+    .nav{
+        margin: auto 0;
+        display: flex;
+        padding:15px;
+        background-color: red;
+    }
+    .nav-toggle {
+        font-size: 1.5rem;
+        color: var(--clr-grey-1);
+        background: transparent;
+        border-color: transparent;
+        transition: var(--transition);
+        cursor: pointer;
+        display: none;
+      }
+      .nav ul{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav ul li{
+        list-style: none;
+        text-decoration: none;
+        margin: auto 0;
+        padding: 0px 10px;
+    }
+
 }
