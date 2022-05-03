@@ -158,7 +158,6 @@ footer{
     height: 30px;
 }
 
-
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);
@@ -181,7 +180,7 @@ footer{
     .nav{
         margin: auto 0;
         display: flex;
-        padding:15px;
+        padding:25px;
         background-color: red;
     }
     .nav-toggle {
@@ -225,7 +224,7 @@ footer{
     .nav{
         margin: auto 0;
         display: flex;
-        padding:15px;
+        padding:25px;
         background-color: red;
     }
     .nav-toggle {
