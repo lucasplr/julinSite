@@ -1,5 +1,6 @@
 const nav = document.querySelector(".nav")
 const btn = document.querySelector(".nav-toggle")
+const links = document.querySelector(".links")
 
 btn.addEventListener("click", () => {
     if(nav.classList.contains("nav-show")){

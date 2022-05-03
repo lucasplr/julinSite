@@ -55,7 +55,6 @@ body{
     background-image: url(images/background.jpeg);
     background-size: cover;
     background-position: center;
-
 }
 header{
     background-color: red;
@@ -89,37 +88,12 @@ header{
     height: 0;
     background-color: red;
     overflow: hidden;
-    animation: bounce 2s ease-in-out infinite;
+    transition: var(--transition);
 }
 .nav-show{
-    animation: bounce 2s ease-in-out infinite;
+    transition: var(--transition);
     height: auto !important;;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .nav-toggle {
     font-size: 1.5rem;
     color: var(--clr-grey-1);
@@ -132,10 +106,7 @@ header{
     transform: scale(1.2);
     transform: rotateZ(90deg);
   }
-.nav ul{
-    display: flex;
-    flex-direction: column;
-}
+
 .nav ul li{
     list-style: none;
     text-decoration: none;
@@ -152,6 +123,9 @@ header{
 .nav a:hover{
     color: white;
 }
+.links a{
+    transition: var(--transition);
+}
 .main{ 
     background-color: rgba(167, 167, 167, 0.877);
     margin: 90px auto;
@@ -159,6 +133,7 @@ header{
     border-radius: 5px;
     width: 400px;
     box-shadow: .5px .5px 5px black;
+    display: grid;
 }
 .text{
     text-align: center;
