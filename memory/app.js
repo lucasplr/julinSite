@@ -141,13 +141,12 @@ const mes = [
 const grid = document.querySelector(".grid")
 const result = document.querySelector(".result")
 const reultText = document.querySelector(".resultText")
-
+const reset = document.querySelector(".reset")
 const header = document.querySelector(".header")
 
 const items = document.querySelector(".time")
 
 const headerWidth = header.getBoundingClientRect().width
-console.log(headerWidth)
 
 counter = 0
 let chosenCards = []
@@ -187,8 +186,6 @@ function boardCreatorBig () {
 
 function checkMatch (){
     const cards = document.querySelectorAll('#this')
-    console.log(chosenCardsIds[0])
-    console.log(chosenCardsIds[1])
     if (chosenCards[0] === chosenCards[1] && chosenCardsIds[0] !== chosenCardsIds[1]){
         setTimeout(changeText, 500)
         cards[chosenCardsIds[0]].setAttribute('src', 'images/white.png')
@@ -225,7 +222,6 @@ function flipCard(e){
     e.currentTarget.setAttribute('src', cardArray[tg].img)
     e.currentTarget.classList.add("flip")
 
-    console.log(e.currentTarget)
     if(chosenCards.length === 2){
         setTimeout(checkMatch, 500)
 
@@ -233,13 +229,7 @@ function flipCard(e){
     }
 }
 
-if(headerWidth < 700){
     boardCreator()
-}else{
-    boardCreatorBig()
-}
-
-
 
 
 
@@ -289,3 +279,12 @@ function getTime(){
 }
 
 let time = setInterval(getTime, 1000)
+
+
+/*
+reset.addEventListener("click", () => {
+    
+    
+})
+
+*/

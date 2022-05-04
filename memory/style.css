@@ -147,7 +147,7 @@ img{
 }
 .resultText{
     background-color: rgba(196, 194, 194, 0.199);
-    margin: 50px auto;
+    margin: 25px auto;
     border-radius: 15px;
     height: 35px;
     width: 300px;
@@ -158,7 +158,12 @@ img{
     font-size: 1.1em;
     border: .5px solid rgba(0, 0, 0, 0.301);
 }
-
+.reset{
+    width: 90px;
+    height: 30px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
 footer{
     background-color: red;
     margin-top: 25px;

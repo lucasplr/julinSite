@@ -65,7 +65,6 @@ function getTime(){
 
 
 const headerWidth = header.getBoundingClientRect().width
-console.log(headerWidth)
 
 
 
