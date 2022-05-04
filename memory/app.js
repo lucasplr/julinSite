@@ -281,10 +281,9 @@ function getTime(){
 let time = setInterval(getTime, 1000)
 
 
-/*
+
 reset.addEventListener("click", () => {
-    
+    window.location.reload(true)
     
 })
 
-*/
