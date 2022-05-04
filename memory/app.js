@@ -147,6 +147,8 @@ const dark = document.querySelector(".dark")
 const body = document.querySelector(".body")
 const footer = document.querySelector(".footer")
 const switchV = document.querySelector(".switch")
+let count = document.querySelector(".counter")
+
 
 const items = document.querySelector(".time")
 
@@ -192,9 +194,7 @@ function checkMatch (){
     const cards = document.querySelectorAll('#this')
     if (chosenCards[0] === chosenCards[1] && chosenCardsIds[0] !== chosenCardsIds[1]){
         setTimeout(changeText, 500)
-        cards[chosenCardsIds[0]].setAttribute('src', 'images/white.png')
         cards[chosenCardsIds[0]].classList.add("img-border")
-        cards[chosenCardsIds[1]].setAttribute('src', 'images/white.png')
         cards[chosenCardsIds[1]].classList.add("img-border")
         cards[chosenCardsIds[0]].removeEventListener('click', flipCard)
         cards[chosenCardsIds[1]].removeEventListener('click', flipCard)
@@ -209,9 +209,11 @@ function checkMatch (){
     chosenCards = []
     chosenCardsIds = []
     reultText.textContent = ""
+    count.textContent = `${counter} tentativa(s)`
     if (cardsWon.length === (cardArray.length)/2){
-        result.textContent = `Precisou de ${counter} tentativas`
+        count.textContent = `Precisou de ${counter} tentativas`
     }
+    
 
 }
 
