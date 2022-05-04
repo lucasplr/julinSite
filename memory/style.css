@@ -123,7 +123,6 @@ header{
 img{
     transition: transform .5s;
     transform-style: preserve-3d;
-    cursor: pointer;
     border: 1px solid rgb(0, 0, 0);
     position: relative;
     border-radius: 5px;
@@ -163,16 +162,17 @@ img{
 footer{
     background-color: red;
     margin-top: 25px;
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
     height: 45px;
-}
-.footerText{
-    padding-left: 15px;
+    padding: 0 25px;
+    font-size: .8em;
+    font-weight: 560;
 }
 @media screen and (min-width: 700px){
     .main{
@@ -220,6 +220,9 @@ footer{
         margin: auto 0;
         padding: 0px 10px;
     }
+    footer{
+        font-size: 1em;
+    }
 }
 @media screen and (min-width: 900px){
     header{
@@ -265,6 +268,9 @@ footer{
         text-decoration: none;
         margin: auto 0;
         padding: 0px 10px;
+    }
+    footer{
+        font-size: 1em;
     }
 
 }
