@@ -143,6 +143,10 @@ const result = document.querySelector(".result")
 const reultText = document.querySelector(".resultText")
 const reset = document.querySelector(".reset")
 const header = document.querySelector(".header")
+const dark = document.querySelector(".dark")
+const body = document.querySelector(".body")
+const footer = document.querySelector(".footer")
+const switchV = document.querySelector(".switch")
 
 const items = document.querySelector(".time")
 
@@ -245,6 +249,11 @@ btn.addEventListener("click", () => {
     }else{
         nav.classList.add("nav-show")
     }
+    if (switchV.classList.contains("show-switch")){
+        switchV.classList.remove("show-switch")
+    }else{
+        switchV.classList.add("show-switch")
+    }
 })
 
 function getTime(){
@@ -287,3 +296,24 @@ reset.addEventListener("click", () => {
     
 })
 
+dark.addEventListener("click", () => {
+    if(switchV.classList.contains("slide")){
+        switchV.classList.remove("slide")
+    }else{
+        switchV.classList.add("slide")
+    }
+    if(body.classList.contains("dark-mode")){
+        body.classList.remove("dark-mode")
+    }else{
+    body.classList.add("dark-mode")
+    }
+    if (header.classList.contains("dark-red") && nav.classList.contains("dark-red") && footer.classList.contains("dark-red")){
+        header.classList.remove("dark-red")
+        nav.classList.remove("dark-red")
+        footer.classList.remove("dark-red")
+    }else{
+        header.classList.add("dark-red")
+        nav.classList.add("dark-red")
+        footer.classList.add("dark-red")
+    }
+})
