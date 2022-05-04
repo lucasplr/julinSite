@@ -178,6 +178,8 @@ function boardCreatorBig () {
 
 function checkMatch (){
     const cards = document.querySelectorAll('#this')
+    console.log(chosenCardsIds[0])
+    console.log(chosenCardsIds[1])
     if (chosenCards[0] === chosenCards[1] && chosenCardsIds[0] !== chosenCardsIds[1]){
         setTimeout(changeText, 500)
         cards[chosenCardsIds[0]].setAttribute('src', 'images/white.png')
@@ -209,7 +211,7 @@ function changeText(){
 
 function flipCard(e){
     let tg = e.currentTarget.dataset.id
-    chosenCards.push(cardArray[tg].name)
+    chosenCards.push(cardArray[tg].img)
     chosenCardsIds.push(tg)
     e.currentTarget.setAttribute('src', cardArray[tg].img)
     e.currentTarget.classList.add("flip")

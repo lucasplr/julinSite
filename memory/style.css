@@ -15,6 +15,7 @@ body{
 header{
     background-color: red;
     width: 100%;
+    box-shadow: 1px 3px 4px 2px rgba(0, 0, 0, 0.432);
 }
 .head{
     display: flex;
@@ -58,6 +59,7 @@ header{
   .nav-toggle:hover {
     transform: scale(1.2);
     transform: rotateZ(90deg);
+    color: white;
   }
 
 .nav ul li{
@@ -95,7 +97,7 @@ header{
 .main{
     background-color: rgba(167, 167, 167, 0.877);
     margin: 30px auto;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     border-radius: 5px;
     box-shadow: .5px .5px 5px black;
     width: 360px;
@@ -155,24 +157,27 @@ img{
     justify-content: center;
     text-transform: uppercase;
     font-size: 1.1em;
+    border: .5px solid rgba(0, 0, 0, 0.301);
 }
 
 footer{
     background-color: red;
-    margin-top: 125px;
-    position: fixed;
+    margin-top: 25px;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     display: flex;
     align-items: center;
-    height: 30px;
+    height: 45px;
 }
-
+.footerText{
+    padding-left: 15px;
+}
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);
-        margin: 30px auto;
+        margin: 115px auto;
         padding-bottom: 50px;
         border-radius: 5px;
         box-shadow: .5px .5px 5px black;
@@ -187,6 +192,9 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        height: 85px;
+        position: fixed;
+        top: 0;
     }
     .nav{
         margin: 5px 0;
@@ -218,10 +226,13 @@ footer{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        height: 85px;
+        position: fixed;
+        top: 0
     }
     .main{
         background-color: rgba(167, 167, 167, 0.877);
-        margin: 30px auto;
+        margin: 115px auto;
         padding-bottom: 50px;
         border-radius: 5px;
         box-shadow: .5px .5px 5px black;
