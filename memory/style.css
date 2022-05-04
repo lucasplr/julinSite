@@ -119,6 +119,7 @@ header{
     height: 300px;
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 img{
     transition: transform .5s;
@@ -159,10 +160,13 @@ img{
     border: .5px solid rgba(0, 0, 0, 0.301);
 }
 .reset{
-    width: 90px;
-    height: 30px;
+    height: 50px;
+    width: 50px;
     margin: 20px auto;
-    border-radius: 15px;
+    border: 1px solid black;
+    box-shadow: inset .3px .3px 10px rgba(0, 0, 0, 0.671);
+    border-radius: 50%;
+    cursor: pointer;
 }
 footer{
     background-color: red;
