@@ -171,8 +171,8 @@ footer{
     position: fixed;
     height: 45px;
     padding: 0 25px;
-    font-size: .8em;
-    font-weight: 500;
+    font-size: .65em;
+    font-weight: 600;
 }
 @media screen and (min-width: 700px){
     .main{
