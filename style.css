@@ -127,11 +127,11 @@ header{
     margin: auto 0;
     padding: 0px 10px;
     display: flex;
-    padding: 5px 15px;
+    padding: 10px 15px;
 }
 .nav a{
     color: black;
-    font-size: 1.3em;
+    font-size: 1.4em;
     text-decoration: none;
 }
 .nav a:hover{
