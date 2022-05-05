@@ -4,6 +4,8 @@ const dias = [
 const mes = [
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
 ]
+let darkA = []
+
 
 const nav = document.querySelector(".nav")
 const btn = document.querySelector(".nav-toggle")
@@ -77,6 +79,8 @@ function getTime(){
 const headerWidth = header.getBoundingClientRect().width
 
 dark.addEventListener("click", () => {
+    console.log(darkA)
+    console.log(darkA.indexOf("dark-mode"))
     if(switchV.classList.contains("slide")){
         switchV.classList.remove("slide")
     }else{
@@ -84,8 +88,10 @@ dark.addEventListener("click", () => {
     }
     if(body.classList.contains("dark-mode")){
         body.classList.remove("dark-mode")
+    darkA = []
     }else{
     body.classList.add("dark-mode")
+    darkA.push("dark-mode")
     }
     if (header.classList.contains("dark-red") && nav.classList.contains("dark-red") && footer.classList.contains("dark-red")){
         header.classList.remove("dark-red")
@@ -98,3 +104,16 @@ dark.addEventListener("click", () => {
     }
 })
 
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (darkA.indexOf("dark-mode") === 0){
+        body.classList.add("dark-mode")
+        header.classList.add("dark-red")
+        nav.classList.add("dark-red")
+        footer.classList.add("dark-red")
+    }
+
+})
+
+console.log(darkA)
+console.log(darkA.indexOf("dark-mode"))
