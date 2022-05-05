@@ -148,6 +148,9 @@ const body = document.querySelector(".body")
 const footer = document.querySelector(".footer")
 const switchV = document.querySelector(".switch")
 let count = document.querySelector(".counter")
+const diaText = document.querySelector(".dia")
+
+const colorText = document.querySelectorAll(".textA")
 
 
 const items = document.querySelector(".time")
@@ -286,7 +289,6 @@ function getTime(){
 
 
   items.innerHTML = `${dias[daySem]}, ${day} de ${mes[month]}, ${hour}:${minutes}`
-  console.log(`${dias[daySem]}, ${day} de ${mes[month]}, ${hour}:${minutes}`)
 }
 
 let time = setInterval(getTime, 1000)
@@ -306,16 +308,74 @@ dark.addEventListener("click", () => {
     }
     if(body.classList.contains("dark-mode")){
         body.classList.remove("dark-mode")
+        removeFromLocalStorage("dark-mode")
     }else{
     body.classList.add("dark-mode")
+    addToLocalStorage("dark-mode")
     }
     if (header.classList.contains("dark-red") && nav.classList.contains("dark-red") && footer.classList.contains("dark-red")){
         header.classList.remove("dark-red")
         nav.classList.remove("dark-red")
         footer.classList.remove("dark-red")
+        footer.classList.remove("white-text")
+        diaText.classList.remove("white-text")
+        colorText.forEach((color) => {
+            color.classList.remove("white-text")
+            })
     }else{
         header.classList.add("dark-red")
         nav.classList.add("dark-red")
         footer.classList.add("dark-red")
+        footer.classList.add("white-text")
+        diaText.classList.add("white-text")
+        colorText.forEach((color) => {
+            color.classList.add("white-text")
+        
+        })
     }
 })
+
+window.addEventListener("DOMContentLoaded", () => {
+    let items = getLocalStorage()
+
+   if(items == "dark-mode"){
+    header.classList.add("dark-red")
+    nav.classList.add("dark-red")
+    footer.classList.add("dark-red")
+    body.classList.add("dark-mode")
+    footer.classList.add("white-text")
+    diaText.classList.add("white-text")
+    colorText.forEach((color) => {
+        color.classList.add("white-text")
+    
+    })
+   }
+})
+
+
+
+function addToLocalStorage(value){
+    const grocery = value
+
+    let items = getLocalStorage();
+    console.log(items[0])
+    items.push(grocery)
+    localStorage.setItem("list", JSON.stringify(items))
+
+}
+
+function removeFromLocalStorage(value){
+    let items = getLocalStorage()
+
+    items = items.filter((item) => {
+        if (item.value === value){ //Se é um item diferente não é removido, se o id é igual, ou seja, o item que quero deletear, o mesmo é filtrado
+            return item
+        }
+        console.log(items[0])
+    })
+    localStorage.setItem("list", JSON.stringify(items))
+}
+
+function getLocalStorage(){
+        return localStorage.getItem("list")?JSON.parse(localStorage.getItem("list")):[]
+}

@@ -129,13 +129,13 @@ header{
     display: flex;
     padding: 10px 15px;
 }
-.nav a{
+.textA{
     color: black;
     font-size: 1.4em;
     text-decoration: none;
 }
 .nav a:hover{
-    color: white;
+    color: rgb(156, 138, 138);
 }
 .links a{
     transition: var(--transition);
@@ -215,7 +215,9 @@ footer{
   .slide{
     left: 0;
   }
-
+  .white-text{
+    color: rgb(230, 216, 216);
+}
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);

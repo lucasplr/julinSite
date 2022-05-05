@@ -86,7 +86,7 @@ header{
     display: flex;
     padding: 10px 15px;
 }
-.nav a{
+.textA{
     color: black;
     font-size: 1.4em;
     text-decoration: none;
@@ -239,7 +239,9 @@ footer{
   .slide{
     left: 0;
   }
-
+  .white-text{
+    color: rgb(230, 216, 216);
+}
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);
