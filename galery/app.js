@@ -25,6 +25,28 @@ const slides = document.querySelectorAll(".slide")
 const nextBtn = document.querySelector(".nextBtn")
 const prevBtn = document.querySelector(".prevBtn")
 
+let btnopen = document.querySelectorAll(".modal-btn")
+let closeBtn = document.querySelector(".close-btn")
+let overlay = document.querySelector(".modal-overlay")
+
+
+
+btnopen.forEach((btn) =>{
+    btn.addEventListener("click", () => {
+        if (overlay.classList.contains("open-modal") != true){
+            overlay.classList.add("open-modal")
+        }
+    })
+})
+
+
+closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("open-modal")
+
+})
+
+
+
 slides.forEach((slide, index) => {
     slide.style.left = `${index * 100}%`
 })
