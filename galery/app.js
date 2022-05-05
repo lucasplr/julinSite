@@ -21,6 +21,44 @@ const colorText = document.querySelectorAll(".textA")
 
 const items = document.querySelector(".time")
 
+const slides = document.querySelectorAll(".slide")
+const nextBtn = document.querySelector(".nextBtn")
+const prevBtn = document.querySelector(".prevBtn")
+
+slides.forEach((slide, index) => {
+    slide.style.left = `${index * 100}%`
+})
+
+let contador = 0
+
+nextBtn.addEventListener("click", () => {
+    contador++
+    carousel()
+})
+
+prevBtn.addEventListener("click", () => {
+    contador--
+    carousel()
+})
+
+function carousel(){
+    if (contador < slides.length - 1){
+        nextBtn.style.display = "block"
+    }else{
+        nextBtn.style.display = "none"
+    }
+
+    if(contador > 0){
+        prevBtn.style.display = "block"
+    }else{
+        prevBtn.style.display = "none"
+    }
+    slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${contador * 100}%)`
+    })
+}
+prevBtn.style.display = "none"
+
 
 btn.addEventListener("click", () => {
     if(nav.classList.contains("nav-show")){

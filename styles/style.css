@@ -272,6 +272,62 @@ footer{
   .white-text{
     color: rgb(230, 216, 216);
 }
+.slider-container {
+    border: 1px solid black;
+    width: 250px;
+    margin: 0 auto;
+    height: 250px;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(139, 0, 0, 0.521);
+    color: var(--clr-white);
+    display: grid;
+    place-items: center;
+    transition: all 0.25s ease-in-out;
+    text-align: center;
+  }
+  .slide-img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .slide:nth-child(1) h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .slide:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("./img-2.jpeg") center/cover no-repeat;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+  }
+  .prevBtn,
+.nextBtn {
+  background: transparent;
+  border-color: transparent;
+  font-size: 1.75rem;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: darkred;
+  transition: var(--transition);
+}
+.prevBtn:hover,
+.nextBtn:hover {
+  color: rgb(184, 68, 68);
+}
 @media screen and (min-width: 700px){
     .main{
         background-color: rgba(167, 167, 167, 0.877);
@@ -325,6 +381,17 @@ footer{
         height: 25px;
         
     }
+    .slider-container {
+        border: 1px solid black;
+        width: 60vw;
+        margin: 0 auto;
+        height: 40vh;
+        max-width: 80rem;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-top: 4rem;
+      }
 }
 @media screen and (min-width: 900px){
     header{
@@ -377,4 +444,15 @@ footer{
     .dark{
         height: 25px;
     }
+    .slider-container {
+        border: 1px solid black;
+        width: 60vw;
+        margin: 0 auto;
+        height: 40vh;
+        max-width: 80rem;
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-top: 4rem;
+      }
 }
