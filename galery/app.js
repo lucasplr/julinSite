@@ -36,6 +36,11 @@ nextBtn.addEventListener("click", () => {
     carousel()
 })
 
+nextBtn.addEventListener("touch", () => {
+    contador++
+    carousel()
+})
+
 prevBtn.addEventListener("click", () => {
     contador--
     carousel()

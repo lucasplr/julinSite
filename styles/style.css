@@ -272,6 +272,11 @@ footer{
   .white-text{
     color: rgb(230, 216, 216);
 }
+.expandText{
+    text-align: center;
+    margin-top: 10px;
+    color: rgba(49, 48, 48, 0.61);
+}
 .slider-container {
     border: 1px solid black;
     width: 250px;
@@ -310,7 +315,7 @@ footer{
   .btn-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
   }
   .prevBtn,
 .nextBtn {
