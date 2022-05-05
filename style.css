@@ -198,7 +198,7 @@ footer{
   }
   .switch {
     position: absolute;
-    visibility: hidden;
+
     width: 50%;
     height: 100%;
     top: 0;
@@ -208,9 +208,6 @@ footer{
     margin: 0;
     display: block;
     transition: var(--transition);
-  }
-  .show-switch{
-      visibility: visible;
   }
   .slide{
     left: 0;
@@ -268,7 +265,8 @@ footer{
         font-size: 1em;
     }
     .dark{
-        display: none;
+        height: 25px;
+        
     }
 }
 @media screen and (min-width: 900px){
@@ -320,7 +318,6 @@ footer{
         font-size: 1em;
     }
     .dark{
-        display: none;
+        height: 25px;
     }
-
 }
