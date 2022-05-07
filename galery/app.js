@@ -209,9 +209,11 @@ dark.addEventListener("click", () => {
     if(body.classList.contains("dark-mode")){
         body.classList.remove("dark-mode")
     removeFromLocalStorage("dark-mode")
+    removeFromLocalStorage("slide")
     }else{
     body.classList.add("dark-mode")
     addToLocalStorage("dark-mode")
+    addToLocalStorage("slide")
     }
     if (header.classList.contains("dark-red") && nav.classList.contains("dark-red") && footer.classList.contains("dark-red")){
         header.classList.remove("dark-red")
@@ -238,8 +240,8 @@ dark.addEventListener("click", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
     let items = getLocalStorage()
-
-   if(items == "dark-mode"){
+    console.log(items[1])
+   if(items[0] == "dark-mode"){
     header.classList.add("dark-red")
     nav.classList.add("dark-red")
     footer.classList.add("dark-red")
@@ -251,6 +253,9 @@ window.addEventListener("DOMContentLoaded", () => {
     
     })
    }
+   if (items[1] == "slide"){
+    switchV.classList.add("slide")
+}
 })
 
 

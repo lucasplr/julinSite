@@ -258,7 +258,6 @@ footer{
   }
   .switch {
     position: absolute;
-
     width: 50%;
     height: 100%;
     top: 0;
@@ -268,9 +267,6 @@ footer{
     margin: 0;
     display: block;
     transition: var(--transition);
-  }
-  .slide{
-    left: 0;
   }
   .white-text{
     color: rgb(230, 216, 216);
@@ -292,14 +288,15 @@ footer{
   }
   .slide {
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    background: rgba(139, 0, 0, 0.521);
+    background: rgb(100, 14, 14);
     color: var(--clr-white);
     display: grid;
     place-items: center;
     transition: all 0.25s ease-in-out;
     text-align: center;
+    left: 0;
   }
   .slide-img {
     height: 100%;
