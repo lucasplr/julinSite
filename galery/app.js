@@ -5,7 +5,9 @@ const mes = [
     "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
 ]
 let darkA = []
-
+const imgs = [
+    
+]
 
 const nav = document.querySelector(".nav")
 const btn = document.querySelector(".nav-toggle")
@@ -33,6 +35,7 @@ let overlay = document.querySelector(".modal-overlay")
 
 btnopen.forEach((btn) =>{
     btn.addEventListener("click", () => {
+        console.log(btn.id)
         if (overlay.classList.contains("open-modal") != true){
             overlay.classList.add("open-modal")
         }
