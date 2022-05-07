@@ -6,13 +6,45 @@ const mes = [
 ]
 let darkA = []
 const imgs = [
-    
+    {
+        img: "imgs/1.jpg",
+        txt: "Julho militar"
+    },
+    {
+        img: "imgs/2.jpg",
+        txt: "Tem que ser muito macho pra usar uma roupa dessas"
+    },
+    {
+        img: "imgs/3.jpg",
+        txt: "fodase"
+    },
+    {
+        img: "imgs/4.jpg",
+        txt: "..."
+    },
+    {
+        img: "imgs/5.jpg",
+        txt: "Julho natalino"
+    },
+    {
+        img: "imgs/6.jpg",
+        txt: "A cara da morte, pós uso de crack"
+    },
+    {
+        img: "imgs/7.jpg",
+        txt: "Julho com barba"
+    },
+    {
+        img: "imgs/8.jpg",
+        txt: "Julho monxtrão"
+    }
 ]
 
 const nav = document.querySelector(".nav")
 const btn = document.querySelector(".nav-toggle")
 const links = document.querySelector(".links")
 const header = document.querySelector(".header")
+const main = document.querySelector(".slider-container")
 const dark = document.querySelector(".dark")
 const body = document.querySelector(".body")
 const footer = document.querySelector(".footer")
@@ -30,22 +62,42 @@ const prevBtn = document.querySelector(".prevBtn")
 let btnopen = document.querySelectorAll(".modal-btn")
 let closeBtn = document.querySelector(".close-btn")
 let overlay = document.querySelector(".modal-overlay")
+const imgS = document.querySelector(".modal-container")
 
+let cont = 0
 
+const imgA = document.createElement('img')
+const txtA = document.createElement('div')
 
 btnopen.forEach((btn) =>{
+
+    console.log(cont)
     btn.addEventListener("click", () => {
-        console.log(btn.id)
+        cont = btn.id
+
+
+        imgA.setAttribute('src', imgs[cont].img)
+        txtA.textContent = imgs[cont].txt 
+        txtA.classList.add('txtA')
+        imgA.classList.add("imgA")
         if (overlay.classList.contains("open-modal") != true){
             overlay.classList.add("open-modal")
+            console.log(main.classList)
+            main.classList.add("mainHide")
+            console.log(main.classList)
+            imgS.appendChild(imgA)
+            imgS.appendChild(txtA)
         }
     })
 })
 
 
+
 closeBtn.addEventListener("click", () => {
     overlay.classList.remove("open-modal")
-
+    main.classList.remove("mainHide")
+    imgA.removeAttribute('src')
+    txtA.textContent = ""
 })
 
 

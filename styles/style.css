@@ -150,6 +150,9 @@ header{
     box-shadow: .5px .5px 5px black;
     display: grid;
 }
+.mainHide{
+  display: none;
+}
 .text{
     text-align: center;
     padding: 15px;
@@ -308,10 +311,7 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .slide:nth-child(3) {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url("./img-2.jpeg") center/cover no-repeat;
-  }
+
   .btn-container {
     display: flex;
     justify-content: center;
@@ -356,12 +356,21 @@ footer{
     background: rgb(167, 167, 167) ;
     border-radius: var(--radius);
     width: 360px;
-    height: 420px;
-    max-width: var(--fixed-width);
+    height: 650px;
     text-align: center;
     display: grid;
     place-items: center;
     position: relative;
+  }
+  .imgA{
+    border: none;
+    padding-bottom: 140px;
+  }
+  .txtA{
+    position: absolute;
+    margin-bottom: 170px;
+    bottom: 0;
+
   }
   .close-btn {
     position: absolute;
@@ -390,7 +399,9 @@ footer{
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: center;
-        
+    }
+    .mainHide{
+      display: none;
     }
     header{
         display: flex;
@@ -399,6 +410,7 @@ footer{
         height: 85px;
         position: fixed;
         top: 0;
+        z-index: 999;
     }
     .nav{
         margin: 5px 0;
@@ -441,6 +453,30 @@ footer{
         overflow: hidden;
         margin-top: 4rem;
       }
+      .modal-overlay{
+        top: 100px;
+      }
+      .modal-container {
+        background: rgb(167, 167, 167) ;
+        border-radius: var(--radius);
+        width: 800px;
+        height: 550px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        position: relative;
+        margin-left: 10px;
+      }
+      .imgA{
+        border: none;
+        padding-bottom: 140px;
+      }
+      .txtA{
+        position: absolute;
+        margin-bottom: 120px;
+        bottom: 0;
+    
+      }
 }
 @media screen and (min-width: 900px){
     header{
@@ -449,7 +485,8 @@ footer{
         justify-content: space-between;
         height: 85px;
         position: fixed;
-        top: 0
+        top: 0;
+        z-index: 999;
     }
     .main{
         background-color: rgba(167, 167, 167, 0.877);
@@ -493,6 +530,9 @@ footer{
     .dark{
         height: 25px;
     }
+    .modal-overlay{
+      top: 100px;
+    }
     .slider-container {
         border: 1px solid black;
         width: 350px;
@@ -502,5 +542,29 @@ footer{
         border-radius: 0.5rem;
         overflow: hidden;
         margin-top: 4rem;
+      }
+      .mainHide{
+      display: none;
+      }
+      .modal-container {
+        background: rgb(167, 167, 167) ;
+        border-radius: var(--radius);
+        width: 700px;
+        height: 550px;
+        text-align: center;
+        display: grid;
+        place-items: center;
+        position: relative;
+        margin-left: 0px;
+      }
+      .imgA{
+        border: none;
+        padding-bottom: 140px;
+      }
+      .txtA{
+        position: absolute;
+        margin-bottom: 120px;
+        bottom: 0;
+    
       }
 }
