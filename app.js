@@ -75,19 +75,20 @@ function getTime(){
 const headerWidth = header.getBoundingClientRect().width
 
 dark.addEventListener("click", () => {
-    if(switchV.classList.contains("slide")){
-        switchV.classList.remove("slide")
+    console.log(switchV.classList)
+    if(switchV.classList.contains("slideBtn")){
+        switchV.classList.remove("slideBtn")
     }else{
-        switchV.classList.add("slide")
+        switchV.classList.add("slideBtn")
     }
     if(body.classList.contains("dark-mode")){
         body.classList.remove("dark-mode")
     removeFromLocalStorage("dark-mode")
-    removeFromLocalStorage("slide")
+    removeFromLocalStorage("slideBtn")
     }else{
     body.classList.add("dark-mode")
     addToLocalStorage("dark-mode")
-    addToLocalStorage("slide")
+    addToLocalStorage("slideBtn")
     }
     if (header.classList.contains("dark-red") && nav.classList.contains("dark-red") && footer.classList.contains("dark-red")){
         header.classList.remove("dark-red")
@@ -127,8 +128,8 @@ window.addEventListener("DOMContentLoaded", () => {
     
     })
    }
-   if (items[1] == "slide"){
-    switchV.classList.add("slide")
+   if (items[1] == "slideBtn"){
+    switchV.classList.add("slideBtn")
 }
 })
 
